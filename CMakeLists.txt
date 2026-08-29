@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(WordleSolver)
+add_library(WordleSolver STATIC src/suggest.cc)
+add_executable(WordleSolverTest src/main.cc)
+target_include_directories(WordleSolver PUBLIC include)
+target_link_libraries(WordleSolverTest PRIVATE WordleSolver)
