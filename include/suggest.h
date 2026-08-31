@@ -8,7 +8,7 @@
 #include <vector>
 
 namespace wordle {
-enum class type { hit, blow, none };
+enum class type { hit, blow, miss };
 void input(std::string word, std::array<type, 5> result);
 std::string suggest();
 }  // namespace wordle
