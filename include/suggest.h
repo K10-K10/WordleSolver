@@ -20,7 +20,8 @@ void update_list();
 inline std::vector<std::string> list;
 inline std::vector<std::string> suggest_list;
 inline std::unordered_set<char> miss;
-inline std::vector<std::unordered_set<char>> blow(5);  // set un correct index;
+inline std::vector<std::array<bool, 6>> blow(26, std::array<bool, 6>{false});
+// is_blow, 0,1,2,3,4
 inline std::vector<char> correct(5, ' ');
 }  // namespace _wordle_
 
