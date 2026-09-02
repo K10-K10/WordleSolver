@@ -59,6 +59,9 @@ void wordle::WordleSolver::update_list() {
       keep = false;
     }
     if (keep) {
+      for (int i = 0; i < 5; ++i) {
+        ++this->cnt_char[i][candidate[i] - 'a'];
+      }
       filtered.push_back(candidate);
     }
   }
@@ -105,3 +108,5 @@ void wordle::WordleSolver::input(std::string word,
   this->update_list();
   return;
 }
+
+std::string wordle::WordleSolver::suggest() {}

@@ -29,6 +29,7 @@ class WordleSolver {
   // is_blow, 0,1,2,3,4
   std::unordered_set<char> blow_cnt;
   std::vector<char> correct = std::vector<char>(5, ' ');
+  std::array<std::array<int, 26>, 5> cnt_char;
 };
 }  // namespace wordle
 
